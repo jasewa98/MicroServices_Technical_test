@@ -25,6 +25,7 @@ Respuesta:
         "descripcion": "Este es un destino de prueba."
     }
 }
+
 Funcionalidades CRUD:
 
 Agregar producto: POST http://localhost:8080/mercadona-app/crud/12345
