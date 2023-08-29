@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "f8cd2228-aa03-4100-852a-67c8f999e3cc",
+		"name": "Mercadona",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20081119"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Crear un Producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjI3NDIsImV4cCI6MTY5MDcyNDE4Mn0.4_cGezLpYLDmCbRVIeldSuTYrcx0U6sCP3__9FB-W-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\" : \"14253\",\r\n    \"ean\": \"8437008142531\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 8437008\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/crud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"crud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar un Producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjI3NDIsImV4cCI6MTY5MDcyNDE4Mn0.4_cGezLpYLDmCbRVIeldSuTYrcx0U6sCP3__9FB-W-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\" : \"14253\",\r\n    \"ean\": \"8437008142531\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 8437008\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/crud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"crud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Producto por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjI3NDIsImV4cCI6MTY5MDcyNDE4Mn0.4_cGezLpYLDmCbRVIeldSuTYrcx0U6sCP3__9FB-W-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\" : \"14253\",\r\n    \"ean\": \"8437008142531\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 8437008\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/crud/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"crud",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todos los Productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjI3NDIsImV4cCI6MTY5MDcyNDE4Mn0.4_cGezLpYLDmCbRVIeldSuTYrcx0U6sCP3__9FB-W-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\" : \"14253\",\r\n    \"ean\": \"8437008142531\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 8437008\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/crud",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"crud"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un Producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjI3NDIsImV4cCI6MTY5MDcyNDE4Mn0.4_cGezLpYLDmCbRVIeldSuTYrcx0U6sCP3__9FB-W-M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_producto\" : \"14253\",\r\n    \"ean\": \"8437008142531\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 8437008\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/crud/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"crud",
+								"12345"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicio EAN",
+			"item": [
+				{
+					"name": "Obtener Datos del Producto con el EAN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3JnZUBnbWFpbC5jb20iLCJpYXQiOjE2OTA3MjE3NTIsImV4cCI6MTY5MDcyMzE5Mn0.ySUPsQ_JF_v0ckcmwkftSQ43AhaUC_iUmwBUJe4B4is",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ean\": \"8437008459059\",\r\n    \"nombre\": \"Producto de Prueba\",\r\n    \"descripcion\": \"Este es un producto de prueba.\",\r\n    \"id_proveedor\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Proveedor de Prueba\",\r\n        \"codigo\": \"8437008\"\r\n    },\r\n    \"id_destino\": {\r\n        \"id\": 1,\r\n        \"nombre\": \"Destino de Prueba\",\r\n        \"descripcion\": \"Este es un destino de prueba.\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/producto/8437008123454",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"producto",
+								"8437008123454"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jorge@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"lastname\":\"seoane\",\r\n    \"firstname\":\"jorge\",\r\n    \"country\":\"Barcelona\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jorge@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mercadona-app/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadona-app",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
